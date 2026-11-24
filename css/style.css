@@ -642,62 +642,80 @@ a:focus-visible {
 
 .edu-grid {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.skill-stack {
+  display: grid;
   gap: 1.25rem;
 }
 
+.skill-card {
+  padding: 1.3rem 1.5rem;
+}
+
+.skill-card h3 {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin: 0 0 0.75rem;
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chips li {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.86rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  margin: 0;
+}
+
 .school {
-  padding: 1.6rem 1.75rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .school-logo {
+  align-self: flex-start;
   display: inline-flex;
   background: #ffffff;
-  border-radius: 8px;
-  padding: 0.6rem 0.9rem;
-  margin-bottom: 1.25rem;
+  border-radius: 10px;
+  padding: 1rem 1.4rem;
+  margin-bottom: 1.75rem;
 }
 
 .school-logo img {
-  height: 64px;
+  height: 84px;
   width: auto;
 }
 
 .school h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.7rem;
+  margin-bottom: 0.4rem;
 }
 
-.school p:not(.meta) {
-  color: var(--muted);
-  margin-bottom: 0.5rem;
+.school p {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
 }
 
-.skills {
-  margin: 0;
-  padding: 0.4rem 1.75rem;
-}
-
-.skills div {
-  display: grid;
-  grid-template-columns: 11.5rem 1fr;
-  gap: 1rem;
-  padding: 0.95rem 0;
-  box-shadow: 0 1px 0 var(--line);
-}
-
-.skills div:last-child {
-  box-shadow: none;
-}
-
-.skills dt {
-  color: var(--brown);
-  font-weight: 600;
-}
-
-.skills dd {
-  margin: 0;
-  color: var(--muted);
+.school .meta {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
 }
 
 /* Contact */
