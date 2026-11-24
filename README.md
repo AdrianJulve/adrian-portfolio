@@ -1,5 +1,7 @@
-# adrianjulve.github.io
+# adrian-portfolio
 
-My portfolio site, live at https://adrianjulve.github.io
+[![Check and deploy](https://github.com/AdrianJulve/adrian-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/AdrianJulve/adrian-portfolio/actions/workflows/deploy.yml)
 
-Plain HTML, CSS and a little JavaScript for the light and dark modes, hosted with GitHub Pages.
+My portfolio site, live at [adrianjulve.github.io/adrian-portfolio](https://adrianjulve.github.io/adrian-portfolio/)
+
+Plain HTML, CSS and a little JavaScript for the light and dark modes. Every push to `main` checks the links and deploys the site to GitHub Pages with GitHub Actions.
