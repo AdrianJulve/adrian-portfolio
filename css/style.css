@@ -322,7 +322,7 @@ a:focus-visible {
 }
 
 .links a::after {
-  content: " \2192";
+  content: "\00a0\2192";
 }
 
 /* Focus */
@@ -650,6 +650,10 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
+.project-hero .project-facts {
+  margin-top: 1.5rem;
+}
+
 .project-facts {
   display: grid;
   grid-template-columns: 1fr 1.3fr 1fr;
@@ -753,8 +757,31 @@ a.shot-frame:hover {
   margin-bottom: 0;
 }
 
+.project-source {
+  padding-top: 1.25rem;
+}
+
+.source-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1.5rem 1.75rem;
+}
+
+.source-card h2 {
+  color: var(--brown);
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.source-card p {
+  margin: 0;
+}
+
 .next {
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 3rem;
 }
 
@@ -781,7 +808,7 @@ a.shot-frame:hover {
 }
 
 .next-title::after {
-  content: " \2192";
+  content: "\00a0\2192";
   color: var(--accent);
 }
 
