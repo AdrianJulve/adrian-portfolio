@@ -22,6 +22,12 @@
     0 6px 9px rgba(70, 45, 25, 0.055),
     0 12px 18px rgba(70, 45, 25, 0.05);
   --shot-bg: #efe8dd;
+  --tint: #efe2cf;
+  --rail: #c9b296;
+  --cover-a: #e9c9ad;
+  --cover-a-text: #6b2f12;
+  --cover-b: #dccbb1;
+  --cover-b-text: #4a3420;
   --font: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
 }
@@ -49,6 +55,12 @@
     0 6px 9px rgba(0, 0, 0, 0.21),
     0 12px 18px rgba(0, 0, 0, 0.19);
   --shot-bg: #261f19;
+  --tint: #2a211b;
+  --rail: #54443a;
+  --cover-a: #3b2619;
+  --cover-a-text: #f0b48a;
+  --cover-b: #2f271f;
+  --cover-b-text: #e3cfb4;
 }
 
 * {
@@ -425,8 +437,53 @@ a:focus-visible {
   margin-bottom: 1.25rem;
 }
 
+.featured .project-image {
+  background: transparent;
+  padding: 1.25rem;
+}
+
+.featured .project-image img {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .featured .project-body {
-  align-self: center;
+  background: var(--tint);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-cover {
+  display: flex;
+  align-items: flex-end;
+  min-height: 7.5rem;
+  padding: 1.25rem 1.75rem;
+}
+
+.project-cover:hover {
+  text-decoration: none;
+}
+
+.project-cover h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cover-a {
+  background: var(--cover-a);
+}
+
+.cover-a h3 {
+  color: var(--cover-a-text);
+}
+
+.cover-b {
+  background: var(--cover-b);
+}
+
+.cover-b h3 {
+  color: var(--cover-b-text);
 }
 
 .project-grid {
@@ -435,8 +492,13 @@ a:focus-visible {
   gap: 1.25rem;
 }
 
+.project-grid .project {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-grid .project-body {
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -486,10 +548,6 @@ a:focus-visible {
   margin-bottom: 0.6rem;
 }
 
-.role-body h3 + ul + h3 {
-  margin-top: 1.25rem;
-}
-
 .role-sub {
   font-family: var(--font);
   font-size: 0.85rem;
@@ -513,6 +571,62 @@ a:focus-visible {
 
 .role-body ul:last-child {
   margin-bottom: 0;
+}
+
+.role {
+  --pad: 1.75rem;
+  --meta: 14rem;
+  position: relative;
+}
+
+.role-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.step + .step {
+  margin-top: 1.5rem;
+}
+
+.step:last-child {
+  flex: 1;
+}
+
+.step h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1.35rem;
+  bottom: calc(-1.5rem - 0.1rem);
+  width: 2px;
+  background: var(--rail);
+}
+
+.progress .role:not(:last-child) .step:last-child::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1.35rem;
+  bottom: -4.75rem;
+  width: 2px;
+  background: var(--rail);
+  z-index: 1;
 }
 
 .subhead {
@@ -856,6 +970,14 @@ a.shot-frame:hover {
 
   .role {
     gap: 0.75rem;
+  }
+
+  .progress .role:not(:last-child) .step:last-child::after {
+    display: none;
+  }
+
+  .featured .project-image {
+    padding: 1rem;
   }
 
   .stats-row {
