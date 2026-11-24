@@ -42,22 +42,22 @@
       <p class="lead">A composite index measuring which Vancouver neighbourhoods offer the best quality of life for the cost, across housing, safety, culture and business.</p>
       <p class="links"><a href="https://github.com/AdrianJulve/Vancouver-Livability-Score">GitHub</a><a href="https://canva.link/9z2a67yguu3e0wd">Presentation</a></p>
       <dl class="project-facts card">
-        <div><dt>Role</dt><dd>Scoring pipeline and composite index, team project</dd></div>
-        <div><dt>Built with</dt><dd>Python, SQL, GeoPandas, Matplotlib</dd></div>
+        <div><dt>Role</dt><dd>Community safety analysis, team project</dd></div>
+        <div><dt>Built with</dt><dd>Python, SQL, pandas, GeoPandas, scikit-learn</dd></div>
         <div><dt>Methods</dt><dd>Weighted scoring, K-means clustering</dd></div>
       </dl>
     </section>
 
     <figure class="shot wrap">
       <div class="shot-frame card">
-        <img src="images/vancouver-value-map.png" alt="Map of Vancouver neighbourhoods coloured by best-value score, from highest to lowest">
+        <img src="images/vancouver-value-map.png" alt="Map of Vancouver neighbourhoods coloured by best-value score, with the top 10 best-value neighbourhoods ranked">
       </div>
     </figure>
     <div class="wrap">
       <div class="stats-row">
-        <div class="stat card"><div class="figure-num">149,383</div><p class="figure-label">property tax records</p></div>
+        <div class="stat card"><div class="figure-num">226,152</div><p class="figure-label">property tax records</p></div>
         <div class="stat card"><div class="figure-num">26,774</div><p class="figure-label">crime incidents</p></div>
-        <div class="stat card"><div class="figure-num">60,000+</div><p class="figure-label">business licences</p></div>
+        <div class="stat card"><div class="figure-num">94,000+</div><p class="figure-label">business licences</p></div>
         <div class="stat card"><div class="figure-num">435</div><p class="figure-label">cultural spaces</p></div>
       </div>
     </div>
@@ -71,15 +71,15 @@
       <section class="panel">
       <h2>Approach</h2>
       <ul>
-        <li>Scored housing, safety, culture and business on a 1 to 5 scale relative to the city</li>
-        <li>Weighted crimes by severity using Crime Severity Index weights</li>
-        <li>Joined all four on neighbourhood into one score: 30% housing, 30% safety, 20% culture, 20% business</li>
+        <li>Each dimension scored per neighbourhood, with safety on a 0 to 10 scale and the others on 1 to 5</li>
+        <li>Community safety built from 2025 VPD crime data, with each offence weighted by its Crime Severity Index value</li>
+        <li>All four joined on neighbourhood in SQLite into one composite score: 40% housing, 30% safety, 15% culture, 15% business</li>
       </ul>
       </section>
       <section class="panel wide">
       <h2>Findings</h2>
       <ul>
-        <li><strong>Four archetypes.</strong> K-means grouped neighbourhoods into an urban hub, a business core, a cultural corridor and emerging suburbs.</li>
+        <li><strong>Four archetypes.</strong> K-means grouped neighbourhoods into high-amenity central areas, safe but quieter west-side areas, an affordable east-side cultural corridor and affordable lower-amenity areas.</li>
         <li><strong>An east/west divide.</strong> West side neighbourhoods are the least affordable, and no cluster leads on all four dimensions.</li>
         <li><strong>Best value.</strong> Downtown, Kitsilano and Mount Pleasant give first-time buyers the strongest mix of amenities and affordability.</li>
         <li><strong>Takeaway.</strong> There is no perfect neighbourhood. The best choice depends on what you value most.</li>
