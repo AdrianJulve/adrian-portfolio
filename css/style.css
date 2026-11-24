@@ -205,19 +205,22 @@ a:focus-visible {
 /* Hero */
 
 .hero {
-  text-align: center;
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
 }
 
 .hero-role {
   color: var(--accent-text);
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 8vw, 5.6rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   line-height: 1;
 }
 
@@ -228,84 +231,70 @@ a:focus-visible {
 .hero-sub {
   color: var(--muted);
   font-size: 1.15rem;
-  max-width: 34rem;
-  margin: 1.5rem auto 2rem;
+  max-width: 32rem;
+  margin: 1.25rem 0 1.75rem;
 }
 
 .hero-actions {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.profile {
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+}
+
+.profile div {
+  padding: 0.85rem 0;
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.profile div:last-child {
+  box-shadow: none;
+}
+
+.profile dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.15rem;
+}
+
+.profile dd {
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Sections */
 
 .section {
-  padding: 3.5rem 0;
+  padding: 3.25rem 0;
 }
 
-.label {
-  display: inline-block;
-  background: var(--pill-bg);
-  color: var(--accent-text);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.2rem 0.75rem;
-  border-radius: 999px;
-  margin-bottom: 0.9rem;
-}
-
-.section h2 {
-  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
-  margin-bottom: 1.75rem;
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 1.25rem;
-}
-
-.about-text {
-  padding: 1.75rem 2rem;
-}
-
-.about-text p:last-child {
-  margin-bottom: 0;
-}
-
-.figures {
-  display: grid;
-  grid-auto-rows: 1fr;
-  gap: 1.25rem;
-}
-
-.stat {
-  padding: 1.25rem 1.5rem;
+.section-head {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 1px 0 var(--line);
 }
 
-.figure-num {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--accent-text);
-  margin-bottom: 0.45rem;
+.section-head h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
 }
 
-.figure-label {
+.section-head p {
   color: var(--muted);
-  font-size: 0.93rem;
   margin: 0;
 }
 
 .meta {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin-bottom: 0;
 }
 
@@ -321,47 +310,61 @@ a:focus-visible {
   content: " \2192";
 }
 
-/* Skills and education */
+/* Focus */
 
-.skills-grid {
+.focus-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
-.skill-group {
-  padding: 1.25rem 1.5rem;
+.focus {
+  padding: 1.4rem 1.4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.skill-group h3 {
-  font-family: var(--font);
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.skill-group p {
-  color: var(--muted);
-  margin: 0;
-}
-
-.school {
-  padding: 1.75rem 2rem;
-  align-self: start;
-}
-
-.school h3 {
-  font-size: 1.4rem;
+.focus h3 {
+  font-size: 1.15rem;
   margin-bottom: 0.5rem;
 }
 
-.school p {
-  color: var(--muted);
-  margin-bottom: 0.2rem;
+.focus p:not(.meta) {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
-.school .school-note {
-  color: var(--text);
-  margin: 1rem 0 0;
+.focus .meta {
+  margin-top: auto;
+}
+
+.figures-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.figures-row div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.figure-num {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+.figure-label {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* Projects */
@@ -385,7 +388,7 @@ a:focus-visible {
 }
 
 .project h3 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin-bottom: 0.6rem;
 }
 
@@ -426,71 +429,157 @@ a:focus-visible {
 
 /* Experience */
 
-.timeline {
-  position: relative;
-  padding-left: 2rem;
+.roles {
+  display: grid;
+  gap: 1.25rem;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0.4rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 2px;
-  background: var(--line);
-}
-
-.entry {
-  position: relative;
+.role {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: 2rem;
   padding: 1.6rem 1.75rem;
-  margin-bottom: 1.25rem;
 }
 
-.entry:last-child {
+.role-meta p {
+  margin: 0;
+}
+
+.role-date {
+  color: var(--accent-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem !important;
+}
+
+.role-org {
+  font-weight: 600;
+}
+
+.role-unit {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.role-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.role-body h3 + ul + h3 {
+  margin-top: 1.25rem;
+}
+
+.role-sub {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+.role-body ul {
+  margin: 0 0 0.9rem;
+  padding-left: 1.1rem;
+}
+
+.role-body li {
+  margin-bottom: 0.4rem;
+}
+
+.role-body li::marker {
+  color: var(--accent);
+}
+
+.role-body ul:last-child {
   margin-bottom: 0;
 }
 
-.entry::before {
-  content: "";
-  position: absolute;
-  left: calc(-2rem + 0.4rem - 4px);
-  top: 1.9rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
+.subhead {
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
 }
 
-.entry-date {
-  color: var(--accent-text);
-  font-size: 0.9rem;
-  font-weight: 600;
+/* Education */
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 1.25rem;
+}
+
+.school {
+  padding: 1.6rem 1.75rem;
+}
+
+.school-logo {
+  display: inline-flex;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.school-logo img {
+  height: 56px;
+  width: auto;
+}
+
+.school h3 {
+  font-size: 1.25rem;
   margin-bottom: 0.3rem;
 }
 
-.entry h3 {
-  font-size: 1.3rem;
+.school p:not(.meta) {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
 }
 
-.entry-org {
+.skills {
+  margin: 0;
+  padding: 0.4rem 1.75rem;
+}
+
+.skills div {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.skills div:last-child {
+  box-shadow: none;
+}
+
+.skills dt {
+  font-weight: 600;
+}
+
+.skills dd {
+  margin: 0;
   color: var(--muted);
-  margin: 0.2rem 0 0.9rem;
 }
 
 /* Contact */
 
-.contact-card {
-  text-align: center;
-  padding: 3.5rem 2rem;
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  padding: 2rem 2.25rem;
 }
 
-.contact-card h2 {
-  margin-bottom: 0.75rem;
+.contact h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.3rem;
 }
 
-.contact-card .muted {
-  margin-bottom: 1.75rem;
+.contact p {
+  color: var(--muted);
+  margin: 0;
 }
 
 /* Footer */
@@ -671,6 +760,12 @@ a:focus-visible {
 
 /* Small screens */
 
+@media (max-width: 1000px) {
+  .focus-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 860px) {
   .wrap {
     padding-left: 1.25rem;
@@ -686,21 +781,28 @@ a:focus-visible {
   }
 
   .hero {
-    padding-top: 3.5rem;
-    padding-bottom: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
   }
 
   .section {
-    padding: 2.5rem 0;
+    padding: 2.25rem 0;
   }
 
-  .two-col,
-  .skills-grid,
   .featured,
   .project-grid,
+  .edu-grid,
+  .figures-row,
+  .role,
   .article,
   .project-facts {
     grid-template-columns: 1fr;
+  }
+
+  .role {
+    gap: 0.75rem;
   }
 
   .stats-row {
@@ -708,29 +810,17 @@ a:focus-visible {
     gap: 1rem;
   }
 
-  .about-text,
-  .entry,
+  .skills div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .role,
   .panel,
   .project-body,
-  .school {
+  .school,
+  .contact {
     padding: 1.25rem;
-  }
-
-  .timeline {
-    padding-left: 1.5rem;
-  }
-
-  .timeline::before {
-    left: 0.25rem;
-  }
-
-  .entry::before {
-    left: calc(-1.5rem + 0.25rem - 4px);
-    top: 1.6rem;
-  }
-
-  .contact-card {
-    padding: 2.5rem 1.25rem;
   }
 
   .project-hero {
@@ -740,6 +830,12 @@ a:focus-visible {
   .footer-links a {
     margin-left: 0;
     margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
   }
 }
 

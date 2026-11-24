@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adrian Julve</title>
-  <meta name="description" content="Adrian Julve is a data science student in Calgary who builds data pipelines, dashboards and reporting tools.">
+  <meta name="description" content="Adrian Julve, data science student in Calgary. Data pipelines, business intelligence and process automation.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>
     var theme = null;
@@ -22,10 +22,10 @@
     <div class="wrap">
       <a class="nav-name" href="#top">Adrian Julve</a>
       <nav class="nav-links">
-        <a class="nav-section" href="#about">About</a>
-        <a class="nav-section" href="#skills">Skills</a>
+        <a class="nav-section" href="#focus">Focus</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a class="nav-section" href="#education">Education</a>
         <a class="nav-section" href="#contact">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch colour mode">
           <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
@@ -38,66 +38,72 @@
 
   <main id="top">
 <section class="hero wrap">
-      <p class="hero-role">Data Science, University of Calgary</p>
-      <h1>Adrian <span class="accent">Julve</span></h1>
-      <p class="hero-sub">I turn messy public and organizational data into pipelines, dashboards and tools that people actually use.</p>
-      <div class="hero-actions">
-        <a class="button" href="#projects">See my work</a>
-        <a class="button button-ghost" href="#contact">Get in touch</a>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="wrap">
-        <span class="label">About</span>
-        <h2>Turning public data into tools people use</h2>
-        <div class="two-col">
-          <div class="card about-text">
-            <p>I'm a Data Science student at the University of Calgary with a concentration in mathematics. The part of data work I enjoy most is the step between a raw table and a decision: cleaning it, checking it and shaping it into something a person can act on.</p>
-            <p>At The City of Calgary, I worked in information management for Planning &amp; Development Services, where I built the division's first end-to-end ticketing pipeline and the team's first public-facing SharePoint site. Before that, I spent a year and a half at the Office of the Registrar, helping move millions of student records to a new system.</p>
-            <p>Outside of work and class, I build my own projects on public data, and I helped lead the Data Science and Machine Learning Club, where I helped launch Vision Labs to connect students with real projects from real companies.</p>
-          </div>
-          <div class="figures">
-            <div class="card stat"><div class="figure-num">4M+</div><p class="figure-label">records migrated at the Office of the Registrar</p></div>
-            <div class="card stat"><div class="figure-num">3,000+</div><p class="figure-label">employees on a SharePoint site I built, up from 20</p></div>
-            <div class="card stat"><div class="figure-num">1st</div><p class="figure-label">end-to-end ticket pipeline in my City division</p></div>
-          </div>
+      <div class="hero-text">
+        <p class="hero-role">Data Science, University of Calgary</p>
+        <h1>Adrian <span class="accent">Julve</span></h1>
+        <p class="hero-sub">Data pipelines, business intelligence and process automation, built on public and organizational data.</p>
+        <div class="hero-actions">
+          <a class="button" href="#projects">View projects</a>
+          <a class="button button-ghost" href="resume.pdf">Resume</a>
         </div>
       </div>
+      <dl class="card profile">
+        <div><dt>Focus</dt><dd>Data pipelines, BI reporting, workflow automation</dd></div>
+        <div><dt>Core tools</dt><dd>Python, SQL, Power BI, Power Automate</dd></div>
+        <div><dt>Education</dt><dd>BSc Data Science, University of Calgary, 2027</dd></div>
+        <div><dt>Location</dt><dd>Calgary, Alberta</dd></div>
+      </dl>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section" id="focus">
       <div class="wrap">
-        <span class="label">Skills</span>
-        <h2>Skills and education</h2>
-        <div class="two-col">
-          <div class="skills-grid">
-            <div class="card skill-group"><h3>Business intelligence</h3><p>Power BI, Tableau, DAX, Power Query, Excel</p></div>
-            <div class="card skill-group"><h3>Data analysis</h3><p>SQL, pandas, NumPy, Matplotlib, Seaborn, Plotly, GeoPandas</p></div>
-            <div class="card skill-group"><h3>Tools and platforms</h3><p>Power Automate, SharePoint, PostgreSQL, Kestra, Git, GitHub Actions</p></div>
-            <div class="card skill-group"><h3>Languages</h3><p>Python, SQL, Java, R, JavaScript</p></div>
-          </div>
-          <div class="card school">
-            <h3>University of Calgary</h3>
-            <p>Bachelor of Science, Data Science</p>
-            <p>Concentration in Mathematics</p>
-            <p class="school-note">Expected April 2027</p>
-          </div>
+        <div class="section-head">
+          <h2>Areas of focus</h2>
+          <p>Analytics work across the full path from raw data to decision support.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="card focus">
+            <h3>Data pipelines</h3>
+            <p>Scheduled ingestion, cleaning and validation, with logged runs, reproducible outputs and automated refresh.</p>
+            <p class="meta">Python, pandas, PostgreSQL, Kestra, GitHub Actions</p>
+          </article>
+          <article class="card focus">
+            <h3>Business intelligence</h3>
+            <p>Dashboards and reporting models that track operational metrics and support planning decisions.</p>
+            <p class="meta">Power BI, DAX, Power Query, Tableau, Excel</p>
+          </article>
+          <article class="card focus">
+            <h3>Workflow automation</h3>
+            <p>Automated intake, routing and tracking of requests, with reporting built into the process from the start.</p>
+            <p class="meta">Power Automate, SharePoint, Power BI</p>
+          </article>
+          <article class="card focus">
+            <h3>Data migration and quality</h3>
+            <p>Large-scale record migration with SQL validation, standardized loads and automated vendor integrations.</p>
+            <p class="meta">SQL, Slate CRM, webhooks</p>
+          </article>
+        </div>
+        <div class="figures-row">
+          <div><span class="figure-num">4M+</span><span class="figure-label">records validated in a CRM migration</span></div>
+          <div><span class="figure-num">3,000+</span><span class="figure-label">employees served by a SharePoint knowledge hub</span></div>
+          <div><span class="figure-num">149K</span><span class="figure-label">property records analysed for a neighbourhood index</span></div>
         </div>
       </div>
     </section>
 
     <section class="section" id="projects">
       <div class="wrap">
-        <span class="label">Projects</span>
-        <h2>Selected work</h2>
+        <div class="section-head">
+          <h2>Selected projects</h2>
+          <p>Independent and team projects built on open data.</p>
+        </div>
         <article class="card project featured">
           <a class="project-image" href="cartcast-yyc.html">
             <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="CartCast YYC dashboard showing the weekly basket cost, price changes, substitutions and a map of Calgary grocery stores">
           </a>
           <div class="project-body">
             <h3><a href="cartcast-yyc.html">CartCast YYC</a></h3>
-            <p>A live dashboard that turns Statistics Canada grocery prices into a weekly food budget for Calgary households, refreshed automatically every week.</p>
+            <p>Live dashboard estimating weekly grocery costs for Calgary households from Statistics Canada and City of Calgary open data, refreshed automatically every week.</p>
             <p class="meta">Python, pandas, JavaScript, GitHub Actions</p>
             <p class="links"><a href="cartcast-yyc.html">Case study</a><a href="https://adrianjulve.github.io/cartcast-yyc/">Live dashboard</a></p>
           </div>
@@ -106,15 +112,15 @@
           <article class="card project">
             <div class="project-body">
               <h3><a href="vancouver-liveability.html">Vancouver Liveability Score</a></h3>
-              <p>A team analysis that scores Vancouver neighbourhoods on housing, safety, culture and business, then finds the best value for first-time buyers.</p>
-              <p class="meta">Python, SQL, GeoPandas, Matplotlib</p>
+              <p>Composite index scoring Vancouver neighbourhoods on housing, safety, culture and business, with K-means clustering and a best-value ranking.</p>
+              <p class="meta">Team project. Python, SQL, GeoPandas, Matplotlib</p>
               <p class="links"><a href="vancouver-liveability.html">Read more</a><a href="https://github.com/AdrianJulve/Vancouver-Livability-Score">GitHub</a></p>
             </div>
           </article>
           <article class="card project">
             <div class="project-body">
               <h3><a href="furniture-orders.html">Furniture Orders Pipeline</a></h3>
-              <p>A scheduled pipeline that loads order data into PostgreSQL every day and refreshes KPI tables for orders, revenue and delivery delays.</p>
+              <p>Scheduled Kestra pipeline loading order data into PostgreSQL and refreshing daily KPI tables for orders, revenue and delivery delays.</p>
               <p class="meta">Kestra, Python, pandas, PostgreSQL</p>
               <p class="links"><a href="furniture-orders.html">Read more</a></p>
             </div>
@@ -125,57 +131,103 @@
 
     <section class="section" id="experience">
       <div class="wrap">
-        <span class="label">Experience</span>
-        <h2>Professional experience</h2>
-        <div class="timeline">
-          <article class="card entry">
-            <p class="entry-date">April to August 2026</p>
-            <h3>Information Management Governance Student</h3>
-            <p class="entry-org">The City of Calgary, Planning &amp; Development Services</p>
-            <p>Designed and built the division's first end-to-end ticketing pipeline. Requests were taken in, assigned and tracked to resolution automatically in Power Automate, then reported in Power BI dashboards on ticket volume and Access to Information metrics. The pipeline handled thousands of IM and records requests.</p>
-            <p>I also designed the team's first public-facing SharePoint site, growing it from 20 users to more than 3,000 employees across Planning &amp; Development Services.</p>
-            <p class="meta">Power Automate, Power BI, SharePoint</p>
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p>Public sector data and information management.</p>
+        </div>
+        <div class="roles">
+          <article class="card role">
+            <div class="role-meta">
+              <p class="role-date">April to August 2026</p>
+              <p class="role-org">The City of Calgary</p>
+              <p class="role-unit">Planning &amp; Development Services</p>
+            </div>
+            <div class="role-body">
+              <h3>Information Management Governance Student</h3>
+              <ul>
+                <li>End-to-end ticketing pipeline for information management and records requests, with intake, assignment and resolution tracking automated in Power Automate.</li>
+                <li>Power BI reporting on ticket volume and Access to Information (ATIA) metrics, supporting thousands of requests.</li>
+                <li>Public-facing SharePoint knowledge hub, scaled from 20 to more than 3,000 users, with standardized reporting logic and documentation.</li>
+              </ul>
+              <p class="meta">Power Automate, Power BI, SharePoint</p>
+            </div>
           </article>
-          <article class="card entry">
-            <p class="entry-date">October 2024 to April 2026</p>
-            <h3>Undergraduate Data Migration Assistant</h3>
-            <p class="entry-org">University of Calgary, Office of the Registrar</p>
-            <p>Helped move more than 4 million student and prospect records to a new CRM, writing the SQL checks that confirmed the data arrived intact. I also automated how recruitment lists and vendor data reached Slate CRM, and built Power BI dashboards on international recruitment that informed enrolment campaigns.</p>
-            <p class="meta">SQL, Slate CRM, Power BI, Webhooks</p>
+          <article class="card role">
+            <div class="role-meta">
+              <p class="role-date">October 2024 to April 2026</p>
+              <p class="role-org">University of Calgary</p>
+              <p class="role-unit">Office of the Registrar</p>
+            </div>
+            <div class="role-body">
+              <h3>Undergraduate Data Migration Assistant</h3>
+              <ul>
+                <li>CRM-to-CRM migration of more than 4 million student and prospect records, with SQL extracts validating migrated data and supporting downstream reporting.</li>
+                <li>Standardized, automated loads of recruitment lists into Slate CRM, plus webhook integrations for vendor data, across more than 15,000 records.</li>
+                <li>Power BI dashboards on international recruitment trends, informing enrolment campaign strategy.</li>
+              </ul>
+              <p class="meta">SQL, Slate CRM, Power BI, webhooks</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="subhead">Leadership</h3>
+        <div class="roles">
+          <article class="card role">
+            <div class="role-meta">
+              <p class="role-date">May 2024 to January 2026</p>
+              <p class="role-org">Data Science and Machine Learning Club</p>
+              <p class="role-unit">University of Calgary</p>
+            </div>
+            <div class="role-body">
+              <h3>Events Director <span class="role-sub">May 2025 to January 2026</span></h3>
+              <ul>
+                <li>Leadership of the events team, overseeing club events from planning through delivery.</li>
+                <li>Helped spearhead Vision Labs, a program pairing students with real projects from industry partners.</li>
+              </ul>
+              <h3>Events Lead <span class="role-sub">May 2024 to April 2025</span></h3>
+              <ul>
+                <li>Planning and coordination of club events, followed by promotion to Events Director.</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="leadership">
+    <section class="section" id="education">
       <div class="wrap">
-        <span class="label">Leadership</span>
-        <h2>Club leadership</h2>
-        <div class="timeline">
-          <article class="card entry">
-            <p class="entry-date">May 2025 to January 2026</p>
-            <h3>Events Director</h3>
-            <p class="entry-org">Data Science and Machine Learning Club</p>
-            <p>Led the club's events team and oversaw its events from planning through delivery. Helped spearhead Vision Labs, a program that gives students real projects from real companies, so members gain industry experience before they graduate.</p>
+        <div class="section-head">
+          <h2>Education and skills</h2>
+          <p>Academic background and technical toolkit.</p>
+        </div>
+        <div class="edu-grid">
+          <article class="card school">
+            <div class="school-logo">
+              <img src="images/ucalgary-logo.png" alt="University of Calgary logo">
+            </div>
+            <h3>Bachelor of Science, Data Science</h3>
+            <p>Concentration in Mathematics</p>
+            <p class="meta">University of Calgary, expected April 2027</p>
           </article>
-          <article class="card entry">
-            <p class="entry-date">May 2024 to April 2025</p>
-            <h3>Events Lead</h3>
-            <p class="entry-org">Data Science and Machine Learning Club</p>
-            <p>Planned and organized the club's events, then stepped up to Events Director the following year.</p>
-          </article>
+          <dl class="card skills">
+            <div><dt>Business intelligence</dt><dd>Power BI, Tableau, DAX, Power Query, Excel</dd></div>
+            <div><dt>Data analysis</dt><dd>SQL, pandas, NumPy, Matplotlib, Seaborn, Plotly, GeoPandas</dd></div>
+            <div><dt>Tools and platforms</dt><dd>Power Automate, SharePoint, PostgreSQL, Kestra, Git, GitHub Actions</dd></div>
+            <div><dt>Languages</dt><dd>Python, SQL, Java, R, JavaScript</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
     <section class="section" id="contact">
       <div class="wrap">
-        <div class="card contact-card">
-          <span class="label">Contact</span>
-          <h2>Let's connect</h2>
-          <p class="muted">I'm always happy to talk about data roles, projects or anything on this site.</p>
+        <div class="card contact">
+          <div>
+            <h2>Get in touch</h2>
+            <p>Open to conversations about data, analytics and business intelligence roles.</p>
+          </div>
           <div class="hero-actions">
-            <a class="button" href="mailto:julveadrian@gmail.com">Email me</a>
+            <a class="button" href="mailto:julveadrian@gmail.com">Email</a>
             <a class="button button-ghost" href="https://www.linkedin.com/in/adrian-julve">LinkedIn</a>
           </div>
         </div>
