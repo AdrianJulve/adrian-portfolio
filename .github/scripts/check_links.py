@@ -14,6 +14,7 @@ for page in pages:
         if ref.startswith(("http://", "https://", "mailto:", "//")):
             continue
         path, _, anchor = ref.partition("#")
+        path = path.split("?", 1)[0]
         target = path or page.name
         if not (root / target).exists():
             problems.append(f"{page.name}: {ref} (file not found)")
