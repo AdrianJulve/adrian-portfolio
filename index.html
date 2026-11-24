@@ -14,7 +14,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,67 +28,39 @@
         <a href="#experience">Experience</a>
         <a class="nav-section" href="#contact">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Switch colour mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
         </button>
-        <a class="button" href="resume.pdf">Resume</a>
+        <a class="button button-small" href="resume.pdf">Resume</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
 <section class="hero wrap">
-      <div class="hero-text">
-        <span class="pill">Data Science, University of Calgary</span>
-        <h1>Adrian<br><span class="accent">Julve</span></h1>
-        <p class="hero-sub">I turn messy public and organizational data into pipelines, dashboards and tools that people actually use.</p>
-        <div class="hero-actions">
-          <a class="button" href="#projects">See my work</a>
-          <a class="button-plain" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <a class="hero-shot card" href="cartcast-yyc.html" tabindex="-1">
-          <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="">
-        </a>
-        <div class="hero-chip chip-top card">
-          <span class="chip-num">4M+</span>
-          <span class="chip-label">records migrated</span>
-        </div>
-        <div class="hero-flow card">
-          <p class="flow-title"><span class="chip-dot"></span>Ticket pipeline, City of Calgary</p>
-          <ol class="flow">
-            <li>Intake</li>
-            <li>Assign</li>
-            <li>Resolve</li>
-            <li>Report</li>
-          </ol>
-        </div>
+      <p class="hero-role">Data Science, University of Calgary</p>
+      <h1>Adrian <span class="accent">Julve</span></h1>
+      <p class="hero-sub">I turn messy public and organizational data into pipelines, dashboards and tools that people actually use.</p>
+      <div class="hero-actions">
+        <a class="button" href="#projects">See my work</a>
+        <a class="button button-ghost" href="#contact">Get in touch</a>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="wrap">
-        <span class="pill">About</span>
+        <span class="label">About</span>
         <h2>Turning public data into tools people use</h2>
         <div class="two-col">
-          <div class="about-text card">
-            <p>I'm a <strong>Data Science student</strong> at the University of Calgary with a concentration in mathematics. The part of data work I enjoy most is the step between a raw table and a decision: cleaning it, checking it and shaping it into something a person can act on.</p>
-            <p>At <strong>The City of Calgary</strong>, I worked in information management for Planning &amp; Development Services, where I built the division's first end-to-end ticketing pipeline and the team's first public-facing SharePoint site. Before that, I spent a year and a half at the <strong>Office of the Registrar</strong>, helping move millions of student records to a new system.</p>
-            <p>Outside of work and class, I build my own projects on public data, and I helped lead the <strong>Data Science and Machine Learning Club</strong>, where I helped launch Vision Labs to connect students with real projects from real companies.</p>
+          <div class="card about-text">
+            <p>I'm a Data Science student at the University of Calgary with a concentration in mathematics. The part of data work I enjoy most is the step between a raw table and a decision: cleaning it, checking it and shaping it into something a person can act on.</p>
+            <p>At The City of Calgary, I worked in information management for Planning &amp; Development Services, where I built the division's first end-to-end ticketing pipeline and the team's first public-facing SharePoint site. Before that, I spent a year and a half at the Office of the Registrar, helping move millions of student records to a new system.</p>
+            <p>Outside of work and class, I build my own projects on public data, and I helped lead the Data Science and Machine Learning Club, where I helped launch Vision Labs to connect students with real projects from real companies.</p>
           </div>
           <div class="figures">
-            <div class="stat card">
-              <div class="figure-num">3,000+</div>
-              <p class="figure-label">City of Calgary employees using a SharePoint site I designed, up from 20</p>
-            </div>
-            <div class="stat card glance">
-              <dl>
-                <div><dt>Based in</dt><dd>Calgary, AB</dd></div>
-                <div><dt>Graduating</dt><dd>April 2027</dd></div>
-                <div><dt>Focus</dt><dd>Data analysis, BI and pipelines</dd></div>
-              </dl>
-            </div>
+            <div class="card stat"><div class="figure-num">4M+</div><p class="figure-label">records migrated at the Office of the Registrar</p></div>
+            <div class="card stat"><div class="figure-num">3,000+</div><p class="figure-label">employees on a SharePoint site I built, up from 20</p></div>
+            <div class="card stat"><div class="figure-num">1st</div><p class="figure-label">end-to-end ticket pipeline in my City division</p></div>
           </div>
         </div>
       </div>
@@ -96,38 +68,20 @@
 
     <section class="section" id="skills">
       <div class="wrap">
-        <span class="pill">Skills</span>
+        <span class="label">Skills</span>
         <h2>Skills and education</h2>
         <div class="two-col">
-          <div>
-            <h3 class="col-title">Technical skills</h3>
-            <div class="skills-grid">
-            <div class="skill-group card">
-              <h4>Business intelligence</h4>
-              <ul class="pills"><li>Power BI</li><li>Tableau</li><li>DAX</li><li>Power Query</li><li>Excel</li></ul>
-            </div>
-            <div class="skill-group card">
-              <h4>Data analysis</h4>
-              <ul class="pills"><li>SQL</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li><li>GeoPandas</li></ul>
-            </div>
-            <div class="skill-group card">
-              <h4>Tools and platforms</h4>
-              <ul class="pills"><li>Power Automate</li><li>SharePoint</li><li>PostgreSQL</li><li>Kestra</li><li>Git</li><li>GitHub Actions</li></ul>
-            </div>
-            <div class="skill-group card">
-              <h4>Languages</h4>
-              <ul class="pills"><li>Python</li><li>SQL</li><li>Java</li><li>R</li><li>JavaScript</li></ul>
-            </div>
-            </div>
+          <div class="skills-grid">
+            <div class="card skill-group"><h3>Business intelligence</h3><p>Power BI, Tableau, DAX, Power Query, Excel</p></div>
+            <div class="card skill-group"><h3>Data analysis</h3><p>SQL, pandas, NumPy, Matplotlib, Seaborn, Plotly, GeoPandas</p></div>
+            <div class="card skill-group"><h3>Tools and platforms</h3><p>Power Automate, SharePoint, PostgreSQL, Kestra, Git, GitHub Actions</p></div>
+            <div class="card skill-group"><h3>Languages</h3><p>Python, SQL, Java, R, JavaScript</p></div>
           </div>
-          <div>
-            <h3 class="col-title">Education</h3>
-            <div class="school card">
-              <h3>University of Calgary</h3>
-              <p>Bachelor of Science, Data Science</p>
-              <p>Concentration in Mathematics</p>
-              <p class="school-note">Expected April 2027</p>
-            </div>
+          <div class="card school">
+            <h3>University of Calgary</h3>
+            <p>Bachelor of Science, Data Science</p>
+            <p>Concentration in Mathematics</p>
+            <p class="school-note">Expected April 2027</p>
           </div>
         </div>
       </div>
@@ -135,36 +89,34 @@
 
     <section class="section" id="projects">
       <div class="wrap">
-        <span class="pill">Projects</span>
+        <span class="label">Projects</span>
         <h2>Selected work</h2>
-
-        <article class="featured card">
-          <a class="featured-image" href="cartcast-yyc.html">
+        <article class="card project featured">
+          <a class="project-image" href="cartcast-yyc.html">
             <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="CartCast YYC dashboard showing the weekly basket cost, price changes, substitutions and a map of Calgary grocery stores">
           </a>
-          <div class="card-body">
-            <h3>CartCast YYC</h3>
-            <p>A live dashboard that estimates what a Calgary household spends on groceries each week. It turns a Statistics Canada price table into an editable basket, with inflation, cheaper substitutions and a map of nearby stores.</p>
-            <ul class="pills"><li>Python</li><li>pandas</li><li>JavaScript</li><li>GitHub Actions</li></ul>
-            <p class="card-links"><a href="cartcast-yyc.html">Case study &rarr;</a><a href="https://adrianjulve.github.io/cartcast-yyc/">Live dashboard &rarr;</a></p>
+          <div class="project-body">
+            <h3><a href="cartcast-yyc.html">CartCast YYC</a></h3>
+            <p>A live dashboard that turns Statistics Canada grocery prices into a weekly food budget for Calgary households, refreshed automatically every week.</p>
+            <p class="meta">Python, pandas, JavaScript, GitHub Actions</p>
+            <p class="links"><a href="cartcast-yyc.html">Case study</a><a href="https://adrianjulve.github.io/cartcast-yyc/">Live dashboard</a></p>
           </div>
         </article>
-
-        <div class="grid">
-          <article class="project-card card">
-            <a class="card-cover cover-orders" href="furniture-orders.html">Furniture Orders Pipeline</a>
-            <div class="card-body">
-              <p>A scheduled pipeline that loads order data into PostgreSQL every day and refreshes KPI tables for orders, revenue and delivery delays.</p>
-              <ul class="pills"><li>Kestra</li><li>Python</li><li>pandas</li><li>PostgreSQL</li></ul>
-              <p class="card-links"><a href="furniture-orders.html">Read more &rarr;</a></p>
+        <div class="project-grid">
+          <article class="card project">
+            <div class="project-body">
+              <h3><a href="vancouver-liveability.html">Vancouver Liveability Score</a></h3>
+              <p>A team analysis that scores Vancouver neighbourhoods on housing, safety, culture and business, then finds the best value for first-time buyers.</p>
+              <p class="meta">Python, SQL, GeoPandas, Matplotlib</p>
+              <p class="links"><a href="vancouver-liveability.html">Read more</a><a href="https://github.com/AdrianJulve/Vancouver-Livability-Score">GitHub</a></p>
             </div>
           </article>
-          <article class="project-card card">
-            <a class="card-cover cover-vancouver" href="vancouver-liveability.html">Vancouver Liveability Score</a>
-            <div class="card-body">
-              <p>A team analysis that scores Vancouver neighbourhoods on housing, safety, culture and business, then finds the best value for first-time buyers.</p>
-              <ul class="pills"><li>Python</li><li>SQL</li><li>GeoPandas</li><li>Matplotlib</li></ul>
-              <p class="card-links"><a href="vancouver-liveability.html">Read more &rarr;</a><a href="https://github.com/AdrianJulve/Vancouver-Livability-Score">GitHub &rarr;</a></p>
+          <article class="card project">
+            <div class="project-body">
+              <h3><a href="furniture-orders.html">Furniture Orders Pipeline</a></h3>
+              <p>A scheduled pipeline that loads order data into PostgreSQL every day and refreshes KPI tables for orders, revenue and delivery delays.</p>
+              <p class="meta">Kestra, Python, pandas, PostgreSQL</p>
+              <p class="links"><a href="furniture-orders.html">Read more</a></p>
             </div>
           </article>
         </div>
@@ -173,62 +125,59 @@
 
     <section class="section" id="experience">
       <div class="wrap">
-        <span class="pill">Experience</span>
+        <span class="label">Experience</span>
         <h2>Professional experience</h2>
         <div class="timeline">
-          <div class="job card">
-            <p class="job-date">April 2026 to August 2026</p>
+          <article class="card entry">
+            <p class="entry-date">April to August 2026</p>
             <h3>Information Management Governance Student</h3>
-            <p class="job-org">The City of Calgary, Planning &amp; Development Services</p>
+            <p class="entry-org">The City of Calgary, Planning &amp; Development Services</p>
             <p>Designed and built the division's first end-to-end ticketing pipeline. Requests were taken in, assigned and tracked to resolution automatically in Power Automate, then reported in Power BI dashboards on ticket volume and Access to Information metrics. The pipeline handled thousands of IM and records requests.</p>
-            <ol class="flow job-flow">
-              <li>Intake</li>
-              <li>Assignment</li>
-              <li>Resolution</li>
-              <li>Reporting</li>
-            </ol>
             <p>I also designed the team's first public-facing SharePoint site, growing it from 20 users to more than 3,000 employees across Planning &amp; Development Services.</p>
-            <ul class="pills"><li>Power Automate</li><li>Power BI</li><li>SharePoint</li></ul>
-          </div>
-          <div class="job card">
-            <p class="job-date">October 2024 to April 2026</p>
+            <p class="meta">Power Automate, Power BI, SharePoint</p>
+          </article>
+          <article class="card entry">
+            <p class="entry-date">October 2024 to April 2026</p>
             <h3>Undergraduate Data Migration Assistant</h3>
-            <p class="job-org">University of Calgary, Office of the Registrar</p>
+            <p class="entry-org">University of Calgary, Office of the Registrar</p>
             <p>Helped move more than 4 million student and prospect records to a new CRM, writing the SQL checks that confirmed the data arrived intact. I also automated how recruitment lists and vendor data reached Slate CRM, and built Power BI dashboards on international recruitment that informed enrolment campaigns.</p>
-            <ul class="pills"><li>SQL</li><li>Slate CRM</li><li>Power BI</li><li>Webhooks</li></ul>
-          </div>
+            <p class="meta">SQL, Slate CRM, Power BI, Webhooks</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="leadership">
       <div class="wrap">
-        <span class="pill">Leadership</span>
-        <h2>Leadership</h2>
+        <span class="label">Leadership</span>
+        <h2>Club leadership</h2>
         <div class="timeline">
-          <div class="job card">
-            <p class="job-date">May 2025 to January 2026</p>
+          <article class="card entry">
+            <p class="entry-date">May 2025 to January 2026</p>
             <h3>Events Director</h3>
-            <p class="job-org">Data Science and Machine Learning Club</p>
-            <p>Led the club's events team and oversaw its events from planning through delivery. Helped spearhead <strong>Vision Labs</strong>, a program that gives students real projects from real companies, so members gain industry experience before they graduate.</p>
-          </div>
-          <div class="job card">
-            <p class="job-date">May 2024 to April 2025</p>
+            <p class="entry-org">Data Science and Machine Learning Club</p>
+            <p>Led the club's events team and oversaw its events from planning through delivery. Helped spearhead Vision Labs, a program that gives students real projects from real companies, so members gain industry experience before they graduate.</p>
+          </article>
+          <article class="card entry">
+            <p class="entry-date">May 2024 to April 2025</p>
             <h3>Events Lead</h3>
-            <p class="job-org">Data Science and Machine Learning Club</p>
+            <p class="entry-org">Data Science and Machine Learning Club</p>
             <p>Planned and organized the club's events, then stepped up to Events Director the following year.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="contact">
       <div class="wrap">
-        <div class="contact-card">
-          <span class="pill">Contact</span>
+        <div class="card contact-card">
+          <span class="label">Contact</span>
           <h2>Let's connect</h2>
-          <p>I'm always happy to talk about data roles, projects or anything on this site.</p>
-          <a class="button" href="mailto:julveadrian@gmail.com">Get in touch</a>
+          <p class="muted">I'm always happy to talk about data roles, projects or anything on this site.</p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:julveadrian@gmail.com">Email me</a>
+            <a class="button button-ghost" href="https://www.linkedin.com/in/adrian-julve">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
@@ -245,6 +194,5 @@
     </div>
   </footer>
   <script src="js/theme.js"></script>
-  <script src="js/hero.js"></script>
 </body>
 </html>
