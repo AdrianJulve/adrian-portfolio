@@ -8,8 +8,18 @@
   --accent-text: #b8480d;
   --on-accent: #fffcf6;
   --line: #e8dece;
-  --shadow: 0 1px 2px rgba(80, 50, 20, 0.05), 0 6px 20px rgba(80, 50, 20, 0.06);
-  --shadow-hover: 0 2px 4px rgba(80, 50, 20, 0.07), 0 12px 32px rgba(80, 50, 20, 0.1);
+  --shadow:
+    0 0.5px 0.5px rgba(80, 50, 20, 0.04),
+    0 1px 1.5px rgba(80, 50, 20, 0.04),
+    0 2px 3px rgba(80, 50, 20, 0.035),
+    0 4px 6px rgba(80, 50, 20, 0.03),
+    0 8px 12px rgba(80, 50, 20, 0.025);
+  --shadow-hover:
+    0 0.5px 0.5px rgba(80, 50, 20, 0.05),
+    0 1px 2px rgba(80, 50, 20, 0.05),
+    0 3px 4px rgba(80, 50, 20, 0.045),
+    0 6px 9px rgba(80, 50, 20, 0.04),
+    0 12px 18px rgba(80, 50, 20, 0.035);
   --shot-bg: #f4f2ec;
   --font: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
@@ -25,8 +35,18 @@
   --accent-text: #ff9455;
   --on-accent: #0c0c0c;
   --line: #262626;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.35);
-  --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.6), 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow:
+    0 0.5px 0.5px rgba(0, 0, 0, 0.22),
+    0 1px 1.5px rgba(0, 0, 0, 0.2),
+    0 2px 3px rgba(0, 0, 0, 0.18),
+    0 4px 6px rgba(0, 0, 0, 0.16),
+    0 8px 12px rgba(0, 0, 0, 0.14);
+  --shadow-hover:
+    0 0.5px 0.5px rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.23),
+    0 3px 4px rgba(0, 0, 0, 0.21),
+    0 6px 9px rgba(0, 0, 0, 0.19),
+    0 12px 18px rgba(0, 0, 0, 0.17);
   --shot-bg: #1d1d1d;
   --pill-bg: #2b1a0e;
 }
