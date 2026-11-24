@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vancouver Liveability Score | Adrian Julve</title>
-  <meta name="description" content="A weighted liveability index for Vancouver neighbourhoods built from housing, crime, cultural and business data.">
+  <meta name="description" content="A team analysis scoring Vancouver neighbourhoods on housing, safety, culture and business, with clustering and a best-value ranking.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>
     var theme = null;
@@ -38,40 +38,54 @@
 
   <main id="top">
 <section class="project-hero wrap">
-<span class="pill">Spatial analysis</span>
+<span class="pill">Team project</span>
       <h1>Vancouver Neighbourhood Liveability Score</h1>
-      <p class="lead">A weighted index that scores Vancouver neighbourhoods on housing, crime, culture and business, then maps the results to compare areas across the city.</p>
+      <p class="lead">Which Vancouver neighbourhoods offer the best quality of life for the money? We scored each one on housing, safety, culture and business.</p>
+      <p class="card-links"><a href="https://github.com/AdrianJulve/Vancouver-Livability-Score">View on GitHub &rarr;</a><a href="https://canva.link/9z2a67yguu3e0wd">View the presentation &rarr;</a></p>
       <dl class="project-facts card">
-        <div><dt>Type</dt><dd>Spatial analysis</dd></div>
+        <div><dt>Role</dt><dd>Scoring pipeline and composite index</dd></div>
         <div><dt>Built with</dt><dd><ul class="pills"><li>Python</li><li>SQL</li><li>GeoPandas</li><li>Matplotlib</li></ul></dd></div>
-        <div><dt>Data</dt><dd>Housing, crime, cultural and business</dd></div>
+        <div><dt>Methods</dt><dd>Weighted scoring, K-means clustering</dd></div>
       </dl>
     </section>
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat card"><div class="figure-num">149,383</div><p class="figure-label">property tax records</p></div>
+        <div class="stat card"><div class="figure-num">26,774</div><p class="figure-label">crime incidents</p></div>
+        <div class="stat card"><div class="figure-num">60,000+</div><p class="figure-label">business licences</p></div>
+        <div class="stat card"><div class="figure-num">435</div><p class="figure-label">cultural spaces</p></div>
+      </div>
+    </div>
 
     <div class="wrap">
     <div class="article">
       <section class="panel">
-      <h2>Overview</h2>
-      <p>Which Vancouver neighbourhoods are the most liveable, and why? Answering that meant combining four very different datasets into one score that can be compared from one neighbourhood to the next.</p>
+      <h2>The question</h2>
+      <p>Vancouver was ranked North America's most liveable city in 2025, but it is also one of the least affordable. We wanted to know where the trade-off is worth it, especially for a first-time buyer.</p>
       </section>
       <section class="panel">
-      <h2>What I built</h2>
+      <h2>Approach</h2>
       <ul>
-        <li>A scoring pipeline in SQL that brings together housing, crime, cultural and business datasets.</li>
-        <li>A weighted liveability index. Each metric is normalized so the datasets can be combined, crime is weighted by severity, and incidents are aggregated by neighbourhood.</li>
-        <li>Maps of the neighbourhood scores in GeoPandas and Matplotlib that show spatial patterns across the city.</li>
+        <li>Scored housing, safety, culture and business on a 1 to 5 scale relative to the city</li>
+        <li>Weighted crimes by severity using Crime Severity Index weights</li>
+        <li>Joined all four on neighbourhood into one score: 30% housing, 30% safety, 20% culture, 20% business</li>
       </ul>
       </section>
-      <section class="panel">
-      <h2>Skills</h2>
-      <p>SQL data modelling, feature normalization and weighting, building a composite index, and spatial analysis and mapping with GeoPandas.</p>
+      <section class="panel wide">
+      <h2>Findings</h2>
+      <ul>
+        <li><strong>Four archetypes.</strong> K-means grouped neighbourhoods into an urban hub, a business core, a cultural corridor and emerging suburbs.</li>
+        <li><strong>An east/west divide.</strong> West side neighbourhoods are the least affordable, and no cluster leads on all four dimensions.</li>
+        <li><strong>Best value.</strong> Downtown, Kitsilano and Mount Pleasant give first-time buyers the strongest mix of amenities and affordability.</li>
+        <li><strong>Takeaway.</strong> There is no perfect neighbourhood. The best choice depends on what you value most.</li>
+      </ul>
       </section>
     </div>
     </div>
     <section class="next wrap">
-      <a class="next-card card" href="cartcast-yyc.html">
+      <a class="next-card card" href="furniture-orders.html">
         <span class="pill">Next project</span>
-        <span class="next-title">CartCast YYC &rarr;</span>
+        <span class="next-title">Furniture Orders Pipeline &rarr;</span>
       </a>
     </section>
   </main>
