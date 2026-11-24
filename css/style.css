@@ -1,54 +1,54 @@
 :root,
 [data-theme="light"] {
-  --bg: #f7f2e9;
-  --surface: #fffcf6;
-  --text: #1f1a14;
-  --muted: #6f665b;
-  --accent: #e0601c;
-  --accent-text: #b8480d;
-  --on-accent: #fffcf6;
-  --line: #e8dece;
+  --bg: #ece3d5;
+  --surface: #f8f2e8;
+  --text: #2a2019;
+  --muted: #6e5c4c;
+  --brown: #7a4a2c;
+  --accent: #c8581f;
+  --accent-text: #a4461a;
+  --on-accent: #fbf6ee;
+  --line: #d8c8b2;
   --shadow:
-    0 0.5px 0.5px rgba(80, 50, 20, 0.04),
-    0 1px 1.5px rgba(80, 50, 20, 0.04),
-    0 2px 3px rgba(80, 50, 20, 0.035),
-    0 4px 6px rgba(80, 50, 20, 0.03),
-    0 8px 12px rgba(80, 50, 20, 0.025);
+    0 0.5px 0.5px rgba(70, 45, 25, 0.06),
+    0 1px 1.5px rgba(70, 45, 25, 0.06),
+    0 2px 3px rgba(70, 45, 25, 0.05),
+    0 4px 6px rgba(70, 45, 25, 0.045),
+    0 8px 12px rgba(70, 45, 25, 0.04);
   --shadow-hover:
-    0 0.5px 0.5px rgba(80, 50, 20, 0.05),
-    0 1px 2px rgba(80, 50, 20, 0.05),
-    0 3px 4px rgba(80, 50, 20, 0.045),
-    0 6px 9px rgba(80, 50, 20, 0.04),
-    0 12px 18px rgba(80, 50, 20, 0.035);
-  --shot-bg: #f4f2ec;
+    0 0.5px 0.5px rgba(70, 45, 25, 0.07),
+    0 1px 2px rgba(70, 45, 25, 0.07),
+    0 3px 4px rgba(70, 45, 25, 0.06),
+    0 6px 9px rgba(70, 45, 25, 0.055),
+    0 12px 18px rgba(70, 45, 25, 0.05);
+  --shot-bg: #efe8dd;
   --font: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
-  --pill-bg: #fbe3d0;
 }
 
 [data-theme="dark"] {
-  --bg: #0c0c0c;
-  --surface: #161616;
-  --text: #f2ede6;
-  --muted: #a1988d;
-  --accent: #ff7a2e;
-  --accent-text: #ff9455;
-  --on-accent: #0c0c0c;
-  --line: #262626;
+  --bg: #15110e;
+  --surface: #201a15;
+  --text: #efe5d8;
+  --muted: #a8978a;
+  --brown: #cf9f78;
+  --accent: #ee7a3c;
+  --accent-text: #f29560;
+  --on-accent: #15110e;
+  --line: #2f2620;
   --shadow:
-    0 0.5px 0.5px rgba(0, 0, 0, 0.22),
-    0 1px 1.5px rgba(0, 0, 0, 0.2),
-    0 2px 3px rgba(0, 0, 0, 0.18),
-    0 4px 6px rgba(0, 0, 0, 0.16),
-    0 8px 12px rgba(0, 0, 0, 0.14);
+    0 0.5px 0.5px rgba(0, 0, 0, 0.24),
+    0 1px 1.5px rgba(0, 0, 0, 0.22),
+    0 2px 3px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.18),
+    0 8px 12px rgba(0, 0, 0, 0.16);
   --shadow-hover:
-    0 0.5px 0.5px rgba(0, 0, 0, 0.25),
-    0 1px 2px rgba(0, 0, 0, 0.23),
-    0 3px 4px rgba(0, 0, 0, 0.21),
-    0 6px 9px rgba(0, 0, 0, 0.19),
-    0 12px 18px rgba(0, 0, 0, 0.17);
-  --shot-bg: #1d1d1d;
-  --pill-bg: #2b1a0e;
+    0 0.5px 0.5px rgba(0, 0, 0, 0.27),
+    0 1px 2px rgba(0, 0, 0, 0.25),
+    0 3px 4px rgba(0, 0, 0, 0.23),
+    0 6px 9px rgba(0, 0, 0, 0.21),
+    0 12px 18px rgba(0, 0, 0, 0.19);
+  --shot-bg: #261f19;
 }
 
 * {
@@ -234,7 +234,7 @@ a:focus-visible {
 }
 
 .hero-role {
-  color: var(--accent-text);
+  color: var(--brown);
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -293,11 +293,6 @@ a:focus-visible {
 }
 
 .section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   box-shadow: 0 1px 0 var(--line);
@@ -345,6 +340,7 @@ a:focus-visible {
 }
 
 .focus h3 {
+  color: var(--brown);
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
 }
@@ -367,8 +363,10 @@ a:focus-visible {
 
 .figures-row div {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
 }
 
 .figure-num {
@@ -385,6 +383,7 @@ a:focus-visible {
   font-size: 0.92rem;
   line-height: 1.4;
   margin: 0;
+  max-width: 16rem;
 }
 
 /* Projects */
@@ -473,6 +472,7 @@ a:focus-visible {
 }
 
 .role-org {
+  color: var(--brown);
   font-weight: 600;
 }
 
@@ -573,6 +573,7 @@ a:focus-visible {
 }
 
 .skills dt {
+  color: var(--brown);
   font-weight: 600;
 }
 
@@ -673,8 +674,13 @@ a:focus-visible {
 }
 
 .shot-frame {
+  display: block;
   overflow: hidden;
   background: var(--shot-bg);
+}
+
+a.shot-frame:hover {
+  box-shadow: var(--shadow-hover);
 }
 
 .stats-row {
@@ -721,6 +727,7 @@ a:focus-visible {
 }
 
 .panel h2 {
+  color: var(--brown);
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
 }
@@ -814,7 +821,6 @@ a:focus-visible {
   .featured,
   .project-grid,
   .edu-grid,
-  .figures-row,
   .role,
   .article,
   .project-facts {
@@ -854,7 +860,8 @@ a:focus-visible {
 }
 
 @media (max-width: 560px) {
-  .focus-grid {
+  .focus-grid,
+  .figures-row {
     grid-template-columns: 1fr;
   }
 }

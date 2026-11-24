@@ -40,7 +40,7 @@
 <section class="project-hero wrap">
 <h1>CartCast YYC</h1>
       <p class="lead">A live dashboard that turns Statistics Canada grocery prices into a weekly food budget for Calgary households.</p>
-      <p class="links"><a href="https://adrianjulve.github.io/cartcast-yyc/">Live dashboard</a><a href="https://github.com/AdrianJulve/cartcast-yyc">View on GitHub</a></p>
+      <p class="links"><a href="https://github.com/AdrianJulve/cartcast-yyc">GitHub</a></p>
       <dl class="project-facts card">
         <div><dt>Role</dt><dd>Pipeline, dashboard and deployment</dd></div>
         <div><dt>Built with</dt><dd>Python, pandas, JavaScript, SVG, GitHub Actions</dd></div>
@@ -49,9 +49,9 @@
     </section>
 
     <figure class="shot wrap">
-      <div class="shot-frame card">
+      <a class="shot-frame card" href="https://adrianjulve.github.io/cartcast-yyc/" title="Open the live dashboard">
         <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="The CartCast YYC overview page, showing the weekly basket cost, Alberta grocery inflation, price changes by item, substitutions, cost by aisle and a map of Calgary grocery stores">
-      </div>
+      </a>
     </figure>
     <div class="wrap">
       <div class="stats-row">
@@ -83,14 +83,6 @@
         <li>Python and pandas pull StatCan and City of Calgary data into a snapshot</li>
         <li>A build step renders one page with hand-built SVG charts, no libraries</li>
         <li>GitHub Actions refreshes the data and redeploys every Monday</li>
-      </ul>
-      </section>
-      <section class="panel">
-      <h2>Challenges</h2>
-      <ul>
-        <li><strong>No city-level prices.</strong> Used Alberta averages and labelled them clearly.</li>
-        <li><strong>Prices aren't inflation.</strong> Used the CPI for every inflation figure.</li>
-        <li><strong>Messy licence data.</strong> Keyword rules and tests fixed missing supermarkets and false matches.</li>
       </ul>
       </section>
     </div>
