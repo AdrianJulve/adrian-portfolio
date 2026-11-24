@@ -40,9 +40,9 @@
 <section class="project-hero wrap">
 <span class="pill">Data engineering</span>
       <h1>Furniture Orders Pipeline</h1>
-      <p class="lead">A scheduled data pipeline that loads furniture order data into PostgreSQL every day and keeps a set of reporting tables up to date.</p>
+      <p class="lead">A scheduled pipeline that loads order data into PostgreSQL every day and keeps the reporting tables current.</p>
       <dl class="project-facts card">
-        <div><dt>Type</dt><dd>Data engineering</dd></div>
+        <div><dt>Schedule</dt><dd>Runs daily</dd></div>
         <div><dt>Built with</dt><dd><ul class="pills"><li>Kestra</li><li>Python</li><li>pandas</li><li>PostgreSQL</li></ul></dd></div>
         <div><dt>Output</dt><dd>Daily KPI tables</dd></div>
       </dl>
@@ -51,27 +51,23 @@
     <div class="wrap">
     <div class="article">
       <section class="panel">
-      <h2>Overview</h2>
-      <p>This project covers the part of reporting that happens before the dashboard: a job that runs on a schedule, loads new orders and refreshes the tables a report reads from.</p>
+      <h2>The goal</h2>
+      <p>Build the part of reporting that happens before the dashboard: a job that loads new orders on schedule and refreshes the tables a report reads from.</p>
       </section>
       <section class="panel">
       <h2>What I built</h2>
       <ul>
-        <li>A Kestra flow that runs daily, ingests order data with Python and pandas, and loads it into PostgreSQL.</li>
-        <li>Daily KPI tables for orders, revenue and delivery delays, ready for reporting and trend analysis.</li>
-        <li>Run logging and reproducible outputs, so any day's run can be traced and repeated when something looks wrong.</li>
+        <li>A daily Kestra flow that loads orders into PostgreSQL</li>
+        <li>KPI tables for orders, revenue and delivery delays</li>
+        <li>Run logging and reproducible outputs for easy troubleshooting</li>
       </ul>
-      </section>
-      <section class="panel">
-      <h2>Skills</h2>
-      <p>Workflow orchestration with Kestra, data loading and transformation in Python and pandas, relational modelling in PostgreSQL, and designing pipelines that are easy to troubleshoot.</p>
       </section>
     </div>
     </div>
     <section class="next wrap">
-      <a class="next-card card" href="vancouver-liveability.html">
+      <a class="next-card card" href="cartcast-yyc.html">
         <span class="pill">Next project</span>
-        <span class="next-title">Vancouver Liveability Score &rarr;</span>
+        <span class="next-title">CartCast YYC &rarr;</span>
       </a>
     </section>
   </main>
@@ -87,5 +83,6 @@
     </div>
   </footer>
   <script src="js/theme.js"></script>
+  <script src="js/hero.js"></script>
 </body>
 </html>

@@ -40,80 +40,66 @@
 <section class="project-hero wrap">
 <span class="pill">Case study</span>
       <h1>CartCast YYC</h1>
-      <p class="lead">A live dashboard that estimates what a Calgary household spends on groceries each week, built entirely on public data from Statistics Canada and the City of Calgary.</p>
+      <p class="lead">A live dashboard that turns Statistics Canada grocery prices into a weekly food budget for Calgary households.</p>
       <p class="card-links"><a href="https://adrianjulve.github.io/cartcast-yyc/">Live dashboard &rarr;</a><a href="https://github.com/AdrianJulve/cartcast-yyc">View on GitHub &rarr;</a></p>
       <dl class="project-facts card">
-        <div><dt>Role</dt><dd>Data pipeline, dashboard and deployment</dd></div>
+        <div><dt>Role</dt><dd>Pipeline, dashboard and deployment</dd></div>
         <div><dt>Built with</dt><dd><ul class="pills"><li>Python</li><li>pandas</li><li>JavaScript</li><li>SVG</li><li>GitHub Actions</li></ul></dd></div>
-        <div><dt>Data</dt><dd>Statistics Canada, City of Calgary</dd></div>
+        <div><dt>Course</dt><dd>DATA 398.1, team pitch</dd></div>
       </dl>
     </section>
 
     <figure class="shot wrap">
       <div class="shot-frame card">
-      <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="The CartCast YYC overview page, showing the weekly basket cost, Alberta grocery inflation, the basket cost over two years, price changes by item, substitutions, cost by aisle and a map of Calgary grocery stores">
+        <img src="images/cartcast-dashboard.jpg" width="1600" height="1118" alt="The CartCast YYC overview page, showing the weekly basket cost, Alberta grocery inflation, price changes by item, substitutions, cost by aisle and a map of Calgary grocery stores">
       </div>
-      <figcaption>The overview page for a family of four, with September 2026 prices.</figcaption>
     </figure>
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat card"><div class="figure-num">110</div><p class="figure-label">grocery products priced every month</p></div>
+        <div class="stat card"><div class="figure-num">366</div><p class="figure-label">Calgary food retailers mapped</p></div>
+        <div class="stat card"><div class="figure-num">29</div><p class="figure-label">unit tests run on every push</p></div>
+        <div class="stat card"><div class="figure-num">Weekly</div><p class="figure-label">automatic data refresh and redeploy</p></div>
+      </div>
+    </div>
 
     <div class="wrap">
     <div class="article">
       <section class="panel">
       <h2>The problem</h2>
-      <p>Food prices in Canada are forecast to rise 4 to 6 percent in 2026. Statistics Canada already publishes the prices a household would need to plan a grocery budget, but they sit in a table of about 110 products across 13 regions. Nobody plans their week from that table.</p>
-      <p>CartCast started as a team pitch in my DATA 398.1 course. I wrote the code: the data pipeline, the dashboard and the automated deployment.</p>
+      <p>Statistics Canada publishes the prices a household needs to plan a grocery budget, but in a 110-product table built for analysts, not families.</p>
       </section>
       <section class="panel">
       <h2>What it does</h2>
       <ul>
-        <li>Prices an editable basket of 25 items for four household sizes, with a two-year trend and a three-month outlook.</li>
-        <li>Shows Calgary grocery inflation from the Consumer Price Index and compares the basket to the Market Basket Measure food cost for Calgary.</li>
-        <li>Suggests cheaper substitutions, shows the weekly saving and applies them to the basket in one click.</li>
-        <li>Maps licensed food retailers. You can search any Calgary address or use your location to see what is within walking distance.</li>
-        <li>Cross-filters every chart by month, aisle, product, community or store type, and stores the whole view in the URL so it can be shared as a link.</li>
+        <li>Prices an editable 25-item basket for four household sizes</li>
+        <li>Tracks Calgary grocery inflation and a poverty-line food benchmark</li>
+        <li>Suggests cheaper swaps with the weekly saving</li>
+        <li>Maps nearby grocery stores from any Calgary address</li>
       </ul>
-      </section>
-      <section class="panel wide">
-      <h2>How it works</h2>
-      <p>A Python package built on pandas downloads the Statistics Canada tables and the City of Calgary licence data, cleans them and writes a compact snapshot into the repository. A build step then renders one self-contained HTML file with the data embedded in it.</p>
-      <p>The dashboard is plain JavaScript with hand-built SVG charts and a custom map, with no front-end libraries and no server. Because the data lives in the page, the browser recalculates the basket, substitutions and charts as soon as the user changes something.</p>
-      <p>A GitHub Actions workflow runs every Monday. It downloads new data, commits the snapshot, rebuilds the page and deploys it to GitHub Pages. A second workflow runs 29 unit tests on every push, covering the loaders, the basket maths, store classification and the build.</p>
-      </section>
-      <section class="panel wide">
-      <h2>Challenges</h2>
-
-      <h3>No city-level prices</h3>
-      <p>Statistics Canada doesn't publish average prices for individual cities, so item prices are Alberta averages. I kept the Calgary-specific parts (inflation, the food benchmark and the store map) separate and labelled the price data clearly as provincial, so the dashboard never claims more precision than the data has.</p>
-
-      <h3>Average prices are not inflation</h3>
-      <p>Average prices change when package sizes or the mix of stores change, so Statistics Canada warns against reading them as inflation. The dashboard calls those figures "change in average price" and uses the CPI for every inflation number.</p>
-
-      <h3>Finding the grocery stores</h3>
-      <p>The City of Calgary business licence data has no clean grocery store category, so I classify licences by keywords in their trade names. The first versions got this wrong in ways that only showed up on the map:</p>
-      <ul>
-        <li>Most supermarkets were missing because the query only accepted two licence statuses, while about two-thirds of active licences are listed as "Renewal Licensed".</li>
-        <li>Walmart was missing because the licence data spells it "WAL-MART".</li>
-        <li>Shops in Market Mall, such as the Apple Store, were listed as grocers because the mall's name contains "market".</li>
-      </ul>
-      <p>I fixed each one with a rule and a unit test so it can't come back. The latest snapshot keeps 366 food retailers out of 596 licence records.</p>
-
-      <h3>Making the basket add up</h3>
-      <p>For any household other than a family of four, quantity times price didn't equal the weekly cost, because the basket table still showed family-of-four quantities. Totals could also be a cent off the sum of their rows. I changed the table to show the quantity the selected household actually buys and rounded each item to the cent before adding. Packaged items can now be entered in packages, by weight or by volume, so the basket matches how people shop.</p>
       </section>
       <section class="panel">
-      <h2>Limitations</h2>
+      <h2>How it works</h2>
       <ul>
-        <li>Prices are Alberta averages and don't reflect sales, loyalty discounts or store brands.</li>
-        <li>The default basket is illustrative and hasn't been checked against a nutritional standard.</li>
-        <li>Walking distances are straight-line, so real routes are longer.</li>
+        <li>Python and pandas pull StatCan and City of Calgary data into a snapshot</li>
+        <li>A build step renders one page with hand-built SVG charts, no libraries</li>
+        <li>GitHub Actions refreshes the data and redeploys every Monday</li>
+      </ul>
+      </section>
+      <section class="panel">
+      <h2>Challenges</h2>
+      <ul>
+        <li><strong>No city-level prices.</strong> Used Alberta averages and labelled them clearly.</li>
+        <li><strong>Prices aren't inflation.</strong> Used the CPI for every inflation figure.</li>
+        <li><strong>Messy licence data.</strong> Keyword rules and tests fixed missing supermarkets and false matches.</li>
       </ul>
       </section>
     </div>
     </div>
     <section class="next wrap">
-      <a class="next-card card" href="furniture-orders.html">
+      <a class="next-card card" href="vancouver-liveability.html">
         <span class="pill">Next project</span>
-        <span class="next-title">Furniture Orders Pipeline &rarr;</span>
+        <span class="next-title">Vancouver Liveability Score &rarr;</span>
       </a>
     </section>
   </main>
@@ -129,5 +115,6 @@
     </div>
   </footer>
   <script src="js/theme.js"></script>
+  <script src="js/hero.js"></script>
 </body>
 </html>
