@@ -28,6 +28,8 @@
   --cover-a-text: #6b2f12;
   --cover-b: #dccbb1;
   --cover-b-text: #4a3420;
+  --feat-bg: #ebd3a1;
+  --feat-title: #5a3a0e;
   --font: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
 }
@@ -61,6 +63,8 @@
   --cover-a-text: #f0b48a;
   --cover-b: #2f271f;
   --cover-b-text: #e3cfb4;
+  --feat-bg: #3a2d14;
+  --feat-title: #efc985;
 }
 
 * {
@@ -432,9 +436,12 @@ a:focus-visible {
 }
 
 .featured {
+  margin-bottom: 1.25rem;
+}
+
+.featured-row {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
-  margin-bottom: 1.25rem;
 }
 
 .featured .project-image {
@@ -447,11 +454,27 @@ a:focus-visible {
   box-shadow: var(--shadow);
 }
 
-.featured .project-body {
-  background: var(--tint);
+.featured-side {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.featured-side .project-cover {
+  margin: 1.25rem 1.25rem 0 0;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.featured-side .project-body {
+  padding-left: 0.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-side .links {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .project-cover {
@@ -485,6 +508,15 @@ a:focus-visible {
 .cover-b h3 {
   color: var(--cover-b-text);
 }
+
+.cover-c {
+  background: var(--feat-bg);
+}
+
+.cover-c h3 {
+  color: var(--feat-title);
+}
+
 
 .project-grid {
   display: grid;
@@ -990,7 +1022,7 @@ a.shot-frame:hover {
     padding: 2.25rem 0;
   }
 
-  .featured,
+  .featured-row,
   .project-grid,
   .edu-grid,
   .role,
@@ -1013,6 +1045,15 @@ a.shot-frame:hover {
 
   .featured .project-image {
     padding: 1rem;
+  }
+
+  .featured-side .project-cover {
+    margin: 0 1rem;
+  }
+
+  .featured-side .project-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .stats-row {
