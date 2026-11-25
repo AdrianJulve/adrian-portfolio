@@ -121,9 +121,16 @@ p {
 
 .wrap {
   width: 100%;
+  max-width: 74rem;
   margin: 0 auto;
-  padding-left: clamp(1.25rem, 4vw, 4rem);
-  padding-right: clamp(1.25rem, 4vw, 4rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.nav .wrap {
+  max-width: none;
+  padding-left: clamp(1.25rem, 3vw, 3rem);
+  padding-right: clamp(1.25rem, 3vw, 3rem);
 }
 
 .card {
@@ -999,38 +1006,6 @@ a.shot-frame:hover {
   color: var(--accent);
 }
 
-/* Wide screens */
-
-@media (min-width: 1500px) {
-  .orgs-pro {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .org-roles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding-left: 0;
-  }
-
-  .org-roles::before {
-    display: none;
-  }
-
-  .org-roles .step {
-    padding-left: 1.5rem;
-    border-left: 2px solid var(--rail);
-  }
-
-  .org-roles .step + .step {
-    margin-top: 0;
-  }
-
-  .org-roles .step > h4::before {
-    display: none;
-  }
-}
-
 /* Small screens */
 
 @media (max-width: 1200px) {
@@ -1040,6 +1015,11 @@ a.shot-frame:hover {
 }
 
 @media (max-width: 860px) {
+  .wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .nav-links {
     gap: 1rem;
   }
