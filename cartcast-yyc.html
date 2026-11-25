@@ -43,7 +43,7 @@
       <p class="lead">A live dashboard that turns Statistics Canada grocery prices into a weekly food budget for Calgary households.</p>
       <dl class="project-facts card">
         <div><dt>Type</dt><dd>Live dashboard, refreshed weekly</dd></div>
-        <div><dt>Built with</dt><dd>Python, pandas, JavaScript, SVG</dd></div>
+        <div><dt>Built with</dt><dd>Python, pandas, JavaScript</dd></div>
         <div><dt>Data</dt><dd>Statistics Canada, City of Calgary</dd></div>
       </dl>
     </section>
@@ -81,9 +81,9 @@
       <section class="panel">
       <h2>How it works</h2>
       <ul>
-        <li>Python and pandas pull StatCan and City of Calgary data into a snapshot</li>
-        <li>A build step renders one page with hand-built SVG charts, no libraries</li>
-        <li>A scheduled job refreshes the data and redeploys every Monday</li>
+        <li>Public price, inflation and store data is collected from Statistics Canada and the City of Calgary</li>
+        <li>The data is cleaned and combined into one interactive dashboard</li>
+        <li>Everything refreshes automatically each week, so the numbers stay current</li>
       </ul>
       </section>
     </div>
