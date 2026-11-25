@@ -980,21 +980,52 @@ a.shot-frame:hover {
   margin: 0;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.back-link::before {
+  content: "\2190";
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+
+.back-link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.back-link:hover::before {
+  transform: translateX(-3px);
+}
+
 .next {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
   padding-top: 1.25rem;
   padding-bottom: 3rem;
 }
 
+.home-card,
 .next-card {
   display: block;
   padding: 1.5rem 1.75rem;
 }
 
+.home-card:hover,
 .next-card:hover {
   text-decoration: none;
   box-shadow: var(--shadow-hover);
 }
 
+.home-card .muted,
 .next-card .muted {
   display: block;
   font-size: 0.9rem;
@@ -1005,6 +1036,26 @@ a.shot-frame:hover {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text);
+}
+
+.home-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.home-title::before {
+  content: "\2190\00a0";
+  color: var(--accent);
+}
+
+.home-card:hover .home-title {
+  color: var(--accent-text);
+}
+
+.next-card {
+  text-align: right;
 }
 
 .next-title::after {
@@ -1021,6 +1072,15 @@ a.shot-frame:hover {
 }
 
 @media (max-width: 860px) {
+  .next {
+    grid-template-columns: 1fr;
+  }
+
+  .next-card {
+    order: -1;
+    text-align: left;
+  }
+
   .wrap {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
