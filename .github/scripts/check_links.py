@@ -16,6 +16,10 @@ for page in pages:
         path, _, anchor = ref.partition("#")
         path = path.split("?", 1)[0]
         target = path or page.name
+        if target in ("./", "."):
+            target = "index.html"
+        elif not (root / target).exists() and (root / (target + ".html")).exists():
+            target = target + ".html"
         if not (root / target).exists():
             problems.append(f"{page.name}: {ref} (file not found)")
         elif anchor and target.endswith(".html") and anchor not in ids.get(target, set()):
