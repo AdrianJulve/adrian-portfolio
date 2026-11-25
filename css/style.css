@@ -176,6 +176,11 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+[data-theme="light"] .theme-dark,
+[data-theme="dark"] .theme-light {
+  display: none !important;
+}
+
 /* Navigation */
 
 .nav {
@@ -487,7 +492,8 @@ a:focus-visible {
 }
 
 .featured-side .links {
-  margin-top: 0.25rem;
+  margin-top: 0;
+  padding-top: 1rem;
 }
 
 .project-cover {
