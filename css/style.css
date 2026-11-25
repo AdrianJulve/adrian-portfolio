@@ -570,10 +570,19 @@ a:focus-visible {
   color: var(--accent);
 }
 
+.org-desc {
+  margin: 0.7rem 0 0;
+  max-width: 46rem;
+}
+
+.org-roles .org-desc {
+  margin-top: 0.4rem;
+}
+
 .org-skills {
   color: var(--muted);
   font-size: 0.9rem;
-  margin: 0;
+  margin: 0.75rem 0 0;
 }
 
 .org-skills strong {
@@ -582,7 +591,7 @@ a:focus-visible {
 }
 
 .org-roles {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
 }
 
 .org-roles h4 {
@@ -597,7 +606,7 @@ a:focus-visible {
 }
 
 .step + .step {
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
 }
 
 .timeline {
